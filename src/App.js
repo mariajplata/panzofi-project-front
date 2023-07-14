@@ -1,13 +1,26 @@
-import logo from './logo.svg';
+import logo from './logo.png';
 import './App.css';
+import LandingPage from './pages/LandingPage';
+import Login from './pages/Login';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <Router>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/landing" element={<LandingPage />} />
+        </Routes>
+      </Router>
+      
+      
+
+
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Edittttttt <code>src/App.js</code> and save to reload.
         </p>
         <a
           className="App-link"
@@ -17,9 +30,9 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
-}
+};
 
 export default App;
